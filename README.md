@@ -37,10 +37,8 @@ try? person.re.edit {
 ```
 // 普通删除
 try? person.re.delete()
-
 // 递归删除所有层级
 try? person.re.delete(.cascade)
-
 // 删除所有
 try? Person.re.deleteAll()
 ```
