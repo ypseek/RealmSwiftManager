@@ -1,0 +1,9 @@
+platform :ios, '10.0'
+#install! 'cocoapods', :generate_multiple_pod_projects => true
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'RealmManager' do
+   use_frameworks!
+ 
+    pod 'RealmSwift'
+end
