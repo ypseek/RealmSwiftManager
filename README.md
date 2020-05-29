@@ -1,15 +1,19 @@
-# RealmManager
-
 ## 使用
 
 ### 增
 
 ```
+// Person模型需继承Realm对象Object
 let person = Person()
 person.id = "101"
 person.name = "xiaoming"
-try? person.re.save()
 
+let dog = Dog()
+dog.name = "hashiqi"
+dog.id = "1001"
+person.dogs.append(dog)
+
+try? person.re.save()
 ```
 ### 查
 
@@ -18,7 +22,6 @@ try? person.re.save()
 try? Person.re.all()
 // 根据主键
 try? Person.re.query(primaryKey: "101")
-
 ```
 
 ### 改
@@ -27,7 +30,6 @@ try? Person.re.query(primaryKey: "101")
 try? person.re.edit {
     $0.name = "xiaohong"
 }
-
 ```
 
 ### 删
@@ -41,9 +43,10 @@ try? person.re.delete(.cascade)
 
 // 删除所有
 try? Person.re.deleteAll()
-
 ```
 
 ## 安装
 
+```
 pod 'RealmManager'
+```
