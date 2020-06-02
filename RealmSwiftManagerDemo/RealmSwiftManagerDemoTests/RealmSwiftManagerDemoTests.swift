@@ -1,15 +1,15 @@
 //
-//  RealmManagerTests.swift
-//  RealmManagerTests
+//  RealmSwiftManagerDemoTests.swift
+//  RealmSwiftManagerDemoTests
 //
-//  Created by yupeng on 2020/5/24.
-//  Copyright © 2020 seek. All rights reserved.
+//  Created by yupeng. on 2020/6/2.
+//  Copyright © 2020 yp. All rights reserved.
 //
 
 import XCTest
-@testable import RealmManager
+@testable import RealmSwiftManagerDemo
 
-class RealmManagerTests: XCTestCase {
+class RealmSwiftManagerDemoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

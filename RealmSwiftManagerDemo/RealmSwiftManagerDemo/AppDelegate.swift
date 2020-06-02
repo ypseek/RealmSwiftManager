@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  RealmManager
+//  RealmSwiftManagerDemo
 //
-//  Created by yupeng on 2020/5/24.
-//  Copyright © 2020 seek. All rights reserved.
+//  Created by yupeng. on 2020/6/2.
+//  Copyright © 2020 yp. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-    
         return true
     }
 

@@ -9,12 +9,12 @@
 import Foundation
 import RealmSwift
 
-struct RealmManagerQueue {
+public struct RealmManagerQueue {
     
     let realm: Realm
     let queue: DispatchQueue
 
-    init?() {
+    public init?() {
         queue = DispatchQueue(label: UUID().uuidString)
         var temp: Realm? = nil
         queue.sync {

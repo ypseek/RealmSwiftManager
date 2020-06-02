@@ -11,7 +11,7 @@ import RealmSwift
 
 extension RealmManager where T: Object {
     
-    func edit(_ closure: @escaping (_ T: T) -> Void) throws {
+    public func edit(_ closure: @escaping (_ T: T) -> Void) throws {
         if self.isManaged {
             guard let rq = RealmManagerQueue() else {
                 throw RealmManagerError.RealmQueueCantBeCreate

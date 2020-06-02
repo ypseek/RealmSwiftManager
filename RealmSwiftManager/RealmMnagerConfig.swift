@@ -15,7 +15,7 @@ var schemaVersion : UInt64 = 1
 public class RealmMnagerConfig {
     
     @discardableResult
-    init() {
+    public init() {
         let cachePath = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
         let dbPath = cachePath.appending("/cacheDB.realm")
         Realm.Configuration.defaultConfiguration.fileURL = URL.init(string: dbPath)

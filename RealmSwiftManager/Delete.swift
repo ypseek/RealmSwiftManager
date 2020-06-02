@@ -21,7 +21,7 @@ protocol RealmManagerList {
 
 extension List: RealmManagerList {
     
-    func children() -> [Object] {
+    public func children() -> [Object] {
         return self.compactMap { $0 as? Object }
     }
 }
@@ -29,7 +29,7 @@ extension List: RealmManagerList {
 extension RealmManagerStatic where T: Object {
     
     /// 删除所有
-    func deleteAll() throws {
+   public func deleteAll() throws {
         let realm = try Realm()
         realm.delete(realm.objects(self.baseType))
     }
@@ -38,7 +38,7 @@ extension RealmManagerStatic where T: Object {
 /// 普通删除
 extension RealmManager where T: Object {
     
-    func delete(_ method: RealManagerDeleteMethod = .simple) throws {
+    public func delete(_ method: RealManagerDeleteMethod = .simple) throws {
         switch method {
         case .simple:
             self.isManaged ? try self.manager_delete() : try self.unmanager_delete()
