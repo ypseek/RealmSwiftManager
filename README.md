@@ -46,5 +46,5 @@ try? Person.re.deleteAll()
 ## 安装
 
 ```
-pod 'RealmManager'
+pod 'RealmSwiftManager'
 ```
