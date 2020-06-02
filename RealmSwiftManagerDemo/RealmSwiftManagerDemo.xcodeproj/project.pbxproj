@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		BF7766CD248650C300F76987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7766CB248650C300F76987 /* LaunchScreen.storyboard */; };
 		BF7766D8248650C400F76987 /* RealmSwiftManagerDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7766D7248650C400F76987 /* RealmSwiftManagerDemoTests.swift */; };
 		BF7766E3248650C400F76987 /* RealmSwiftManagerDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7766E2248650C400F76987 /* RealmSwiftManagerDemoUITests.swift */; };
+		BF7766F1248662F900F76987 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7766F0248662F900F76987 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BF7766DE248650C400F76987 /* RealmSwiftManagerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealmSwiftManagerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7766E2248650C400F76987 /* RealmSwiftManagerDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftManagerDemoUITests.swift; sourceTree = "<group>"; };
 		BF7766E4248650C400F76987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7766F0248662F900F76987 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		CC0E7C3DFBCB383E758E84D3 /* Pods-RealmSwiftManagerDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSwiftManagerDemo.debug.xcconfig"; path = "Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BE9197795B1B4B0DB3491F /* Pods-RealmSwiftManagerDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RealmSwiftManagerDemo.release.xcconfig"; path = "Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +97,6 @@
 				CC0E7C3DFBCB383E758E84D3 /* Pods-RealmSwiftManagerDemo.debug.xcconfig */,
 				E2BE9197795B1B4B0DB3491F /* Pods-RealmSwiftManagerDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -127,6 +128,7 @@
 				BF7766C0248650BF00F76987 /* AppDelegate.swift */,
 				BF7766C2248650BF00F76987 /* SceneDelegate.swift */,
 				BF7766C4248650BF00F76987 /* ViewController.swift */,
+				BF7766F0248662F900F76987 /* Person.swift */,
 				BF7766C6248650BF00F76987 /* Main.storyboard */,
 				BF7766C9248650C300F76987 /* Assets.xcassets */,
 				BF7766CB248650C300F76987 /* LaunchScreen.storyboard */,
@@ -164,7 +166,7 @@
 				BF7766B9248650BF00F76987 /* Sources */,
 				BF7766BA248650BF00F76987 /* Frameworks */,
 				BF7766BB248650BF00F76987 /* Resources */,
-				3553E5348923DD0DDCCEA05C /* [CP] Embed Pods Frameworks */,
+				C5FE1A7715862474874FB747 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,23 +284,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3553E5348923DD0DDCCEA05C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		65CF5730A767867E20834F12 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +306,23 @@
 			shellScript = "           diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\n           if [ $? != 0 ] ; then\n               # print error to STDERR\n               echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n               exit 1\n           fi\n           # This output is used by Xcode 'outputs' to avoid re-running this script phase.\n           echo \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n\ncat \"${PROJECT_FILE_PATH}/frameworks.sh\" | bash\n\t\n";
 			showEnvVarsInLog = 0;
 		};
+		C5FE1A7715862474874FB747 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RealmSwiftManagerDemo/Pods-RealmSwiftManagerDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -330,6 +332,7 @@
 			files = (
 				BF7766C5248650BF00F76987 /* ViewController.swift in Sources */,
 				BF7766C1248650BF00F76987 /* AppDelegate.swift in Sources */,
+				BF7766F1248662F900F76987 /* Person.swift in Sources */,
 				BF7766C3248650BF00F76987 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
